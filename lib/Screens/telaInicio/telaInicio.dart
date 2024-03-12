@@ -171,8 +171,8 @@ class _TelaInicioState extends State<TelaInicio> {
                             decoration: const BoxDecoration(
                                 color: Color.fromARGB(255, 69, 110, 124),
                                 shape: BoxShape.circle),
-                            child: Icon(Icons.calendar_today,
-                                color: Colors.white),
+                            child:
+                                Icon(Icons.calendar_today, color: Colors.white),
                           ),
                         )
                       ],
@@ -189,8 +189,37 @@ class _TelaInicioState extends State<TelaInicio> {
             padding: EdgeInsets.all(12.0),
             child: Text('Para Você',
                 style: TextStyle(
-                    fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)),
-          )
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white)),
+          ),
+          SizedBox(
+            child: Stack(
+              alignment: AlignmentDirectional.topStart,
+              children: [
+                Image.asset('hotWheelsEvento.jpg', width: 300, height: 150),
+                 const Padding(
+                  padding: EdgeInsets.only(left: 15.0),
+                  child: SizedBox(
+                    width: 65,
+                    child: Card(
+                      color: Colors.grey,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.star,
+                            color: Colors.orange,
+                          ),
+                          Text('4.7'),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ]),
       ),
     );

@@ -14,18 +14,12 @@ class _TelaInicioState extends State<TelaInicio> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 6, 35, 44),
-        leading: IconButton(
-          icon: SizedBox(
-            height: 200,
-            width: 200, // Set the desired width here
-            child: Image.asset(
-              'assets/Logo.png',
-              height: 200, // Set the desired height here
-            ),
-          ),
-          onPressed: () {},
-          color: Colors.white,
+        title: Image.asset(
+          'assets/Logo.png',
+          height: 200, // Defina a altura desejada para a logo
+          width: 200, // Defina a largura desejada para a logo
         ),
+        centerTitle: true, // Centralizar o título (logo)
         actions: [
           Padding(
             padding: const EdgeInsets.all(16.0),
@@ -36,7 +30,7 @@ class _TelaInicioState extends State<TelaInicio> {
       body: Container(
         decoration: const BoxDecoration(
           color: Color.fromARGB(
-              255, 6, 35, 44), // Change this to the desired background color
+              255, 6, 35, 44), // Mude isso para a cor de fundo desejada
         ),
         child: ListView(children: [
           Padding(

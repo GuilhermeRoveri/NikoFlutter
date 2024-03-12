@@ -32,6 +32,9 @@ class Search extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double cardWidth = (screenWidth - 40) / 2; 
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 6, 35, 44),
@@ -106,7 +109,7 @@ class Search extends StatelessWidget {
                         'espetáculos ao vivo',
                         textStyle: TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.bold,
+                          fontWeight:FontWeight.bold,
                         ),
                       ),
                     ],
@@ -127,66 +130,26 @@ class Search extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    cardBusca(
-                      215,
-                      200,
-                      'assets/harrystyles.jpg',
-                      "Harry Styles",
-                    ),
-                    cardBusca(
-                      215,
-                      200,
-                      'assets/eventoslipknot.jpg',
-                      "SlipkNot",
-                    ),
+                    cardBusca(cardWidth, 200, 'assets/harrystyles.jpg', "Harry Styles"),
+                    cardBusca(cardWidth, 200, 'assets/eventoslipknot.jpg', "SlipkNot"),
                   ],
                 ),
                 Row(
                   children: [
-                    cardBusca(
-                      215,
-                      200,
-                      'assets/imaginedragons.jpeg',
-                      "Imagine Dragons",
-                    ),
-                    cardBusca(
-                      215,
-                      200,
-                      'assets/metallica.jpg',
-                      "Metallica",
-                    ),
+                    cardBusca(cardWidth, 200, 'assets/imaginedragons.jpeg', "Imagine Dragons"),
+                    cardBusca(cardWidth, 200, 'assets/metallica.jpg', "Metallica"),
                   ],
                 ),
                 Row(
                   children: [
-                    cardBusca(
-                      215,
-                      200,
-                      'assets/pixote.jpg',
-                      "Pixote",
-                    ),
-                    cardBusca(
-                      215,
-                      200,
-                      'assets/alok.jpg',
-                      "Alok",
-                    ),
+                    cardBusca(cardWidth, 200, 'assets/pixote.jpg', "Pixote"),
+                    cardBusca(cardWidth, 200, 'assets/alok.jpg', "Alok"),
                   ],
                 ),
                 Row(
                   children: [
-                    cardBusca(
-                      215,
-                      200,
-                      'assets/articmonkeys.jpeg',
-                      "Artic Monkeys",
-                    ),
-                    cardBusca(
-                      215,
-                      200,
-                      'assets/luansantan.jpg',
-                      "Luan Santana",
-                    ),
+                    cardBusca(cardWidth, 200, 'assets/articmonkeys.jpeg', "Artic Monkeys"),
+                    cardBusca(cardWidth, 200, 'assets/luansantan.jpg', "Luan Santana"),
                   ],
                 ),
               ],

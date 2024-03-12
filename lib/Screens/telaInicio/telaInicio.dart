@@ -194,12 +194,14 @@ class _TelaInicioState extends State<TelaInicio> {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  cardHome('4.7', 'hotWheelsEvento.jpg', 'Oca',
+                  cardHome('Novo!', 'hotWheelsEvento.jpg', 'Oca',
                       'Hot Wheels City Experience - São Paulo', '36,80'),
                   cardHome('4.5', 'passeioBalao.jpg', 'Balão Mágico',
                       'Passeio de Balão em Boituva', '499,00'),
                   cardHome('6.9', 'luzVermelha.jpg', 'Migs',
                       'A Casa da Luz Vermelha', '69,69'),
+                  cardHome('5.0', 'jogosTabuleiro.jpg', 'Rua Vieira Morais',
+                      'Tarde/Noite de Jogos para toda a família', '10,00'),
                 ],
               )),
         ]),

@@ -66,7 +66,7 @@ Widget cardHome(String avaliacao, String img, String local, String titulo, Strin
           children: [
             Image.asset(img, width: 225, height: 150),
             SizedBox(
-              width: 65,
+              width: 100,
               child: Card(
                 color: Colors.transparent,
                 child: Row(

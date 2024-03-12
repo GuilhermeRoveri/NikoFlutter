@@ -1,3 +1,4 @@
+import 'package:appevento/Screens/CustomWidgets/Card.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -189,83 +190,18 @@ class _TelaInicioState extends State<TelaInicio> {
                     color: Colors.white)),
           ),
           SizedBox(
-              child: Column(
-            children: [
-              Stack(
+              height: 300,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
                 children: [
-                  Image.asset('hotWheelsEvento.jpg', width: 300, height: 150),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(35, 0, 12, 12),
-                    child: SizedBox(
-                      width: 65,
-                      child: Card(
-                        color: Colors.transparent,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.star,
-                              color: Colors.orange,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(4, 4, 0, 0),
-                              child: Text(
-                                '4.7',
-                                style: TextStyle(
-                                    color: Colors.orange,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
+                  cardHome('4.7', 'hotWheelsEvento.jpg', 'Oca',
+                      'Hot Wheels City Experience - São Paulo', '36,80'),
+                  cardHome('4.5', 'passeioBalao.jpg', 'Balão Mágico',
+                      'Passeio de Balão em Boituva', '499,00'),
+                  cardHome('6.9', 'luzVermelha.jpg', 'Migs',
+                      'A Casa da Luz Vermelha', '69,69'),
                 ],
-              ),
-              Container(
-                height: 130,
-                width: 223,
-                decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(8),
-                        bottomRight: Radius.circular(8))),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Icon(
-                            MdiIcons.mapMarkerOutline,
-                            color: Colors.grey,
-                          ),
-                          const Text(
-                            'Oca',
-                            style: TextStyle(
-                                color: Colors.grey,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20),
-                          )
-                        ],
-                      ),
-                      const Text('Hot Wheels City Experience - São Paulo',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 18)),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      const Text('De R\$ 36,80', style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 16
-                      ),)
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          )), 
+              )),
         ]),
       ),
     );
